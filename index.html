@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Orbit</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/stopwatch-icon.png">
+
+    <!-- this link imports svg icons from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+</head>
+
+<body>
+    <div class="stopwatch">
+        <div class="rotator">
+            <div class="dot"></div>
+        </div>
+        <div class="time" id="time">00 : 00 : 00</div>
+        <div class="labels">min : sec : msec</div>
+        <div class="controls">
+            <button class="control-btn reset" onclick="stopwatch.reset()"><span class="material-symbols-outlined stop_logo">stop_circle</span></button>
+            <button class="control-btn play" onclick="stopwatch.start()"><span class="material-symbols-outlined play_logo">play_circle</span></button>
+            <button class="control-btn stop" onclick="stopwatch.stop()"><span class="material-symbols-outlined pause_logo">pause_circle</span></button>
+            <button class="control-btn lap" onclick="stopwatch.lap()"><span class="material-symbols-outlined lap_logo">flag_2</span></button>
+        </div>
+    </div>
+    
+    <div class="lap_wrapper">
+        <div class="lap_times_header">
+            <div class="lap_header">LAP</div>
+            <div class="time_header">LAP TIME</div>
+            <div class="lap_overall_header">OPVERALL</div>
+        </div>
+        
+        <div class="lap_data">
+            <table id="lap-times"></table>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
